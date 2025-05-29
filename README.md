@@ -11,6 +11,10 @@ It strictly avoids community modules and includes:
 - Observability Stack: Prometheus, Grafana, Loki, Promtail, Cluster Autoscaler
 - Works on both EKS and Minikube for local testing
 
+### Terraform EKS Architecture
+
+![JUCR Terraform EKS Architecture](./final-jucr1.jpg)
+
 ## ⚙️ Usage
 
 ### Initialize
