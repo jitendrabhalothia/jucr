@@ -13,7 +13,9 @@ It strictly avoids community modules and includes:
 
 ### Terraform EKS Architecture
 
-![JUCR Terraform EKS Architecture](./final-jucr1.jpg)
+![EKS Diagram](https://jitendrabhalothia.github.io/eks-diagram/eks-f1.drawio.svg)
+
+👉 [View Fullscreen](https://jitendrabhalothia.github.io/eks-diagram/eks-f1.drawio.svg)
 
 ## ⚙️ Usage
 
