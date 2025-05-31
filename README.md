@@ -2,7 +2,7 @@
 
 ## ✅ Overview
 
-This repository provisions a fully automated Amazon EKS environment using raw Terraform resources.
+This repository aims to provisions a fully automated Amazon EKS environment using raw Terraform resources.
 It strictly avoids community modules and includes:
 
 - VPC with 3 AZs, public and private subnets

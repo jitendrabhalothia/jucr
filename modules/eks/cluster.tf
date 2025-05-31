@@ -9,10 +9,6 @@ resource "aws_eks_cluster" "main" {
 
   depends_on = [aws_iam_role_policy_attachment.eks_cluster_policy]
 }
-
-  depends_on = [aws_iam_role_policy_attachment.eks_cluster_policy]
-}
-
 resource "aws_eks_node_group" "main" {
   cluster_name    = aws_eks_cluster.main.name
   version         = var.eks_version
@@ -24,13 +20,6 @@ resource "aws_eks_node_group" "main" {
     max_size     = 6
     min_size     = 1
   }
-
-  depends_on = [
-    aws_iam_role_policy_attachment.eks_worker_node_policy,
-    aws_iam_role_policy_attachment.eks_cni_policy,
-    aws_iam_role_policy_attachment.ecr_read_only
-  ]
-}
 
   depends_on = [
     aws_iam_role_policy_attachment.eks_worker_node_policy,
