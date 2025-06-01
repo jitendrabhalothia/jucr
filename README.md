@@ -2,14 +2,13 @@
 
 ## ✅ Overview
 
-This repository aims to provisions a fully automated Amazon EKS environment using raw Terraform resources.
-It strictly avoids community modules and includes:
+This repository provisions a fully automated Amazon EKS environment using only raw Terraform resources (no community modules). It supports local testing on Minikube with a parallel observability stack.:
 
 - VPC with 3 AZs, public and private subnets
 - EKS Cluster and Node Groups
 - IAM roles, OIDC, and IRSA
 - Observability Stack: Prometheus, Grafana, Loki, Promtail, Cluster Autoscaler
-- Works on both EKS and Minikube for local testing
+- Separate testing module for Minikube observability stack
 
 ### Terraform EKS Architecture
 
@@ -36,6 +35,10 @@ terraform apply -var-file="eks.tfvars"
 
 ### Apply (Minikube)
 ```bash
+cd observability-local-stack
+export KUBECONFIG=~/.kube/config
+terraform init
+terraform plan -var-file="minikube.tfvars
 terraform apply -var-file="minikube.tfvars"
 ```
 
@@ -62,5 +65,6 @@ PromQL support is updated via Prometheus/Grafana upgrades.
 
 ## 📘 Notes
 
-- IRSA used for Prometheus and Autoscaler
-- All components use raw Terraform resources
+- Prometheus & Autoscaler use IRSA roles in EKS.
+- Minikube stack uses local Helm charts without AWS dependencies.
+- Everything is deployable via Terraform without wrappers.

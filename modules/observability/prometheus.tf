@@ -11,7 +11,7 @@ resource "helm_release" "prometheus" {
   namespace  = kubernetes_namespace.monitoring.metadata[0].name
 
   set {
-    name  = "serviceAccounts.server.annotations.eks\.amazonaws\.com/role-arn"
-    value = aws_iam_role.irsa_prometheus.arn
-  }
+  name  = "serviceAccounts.server.annotations.eks\\.amazonaws\\.com/role-arn"
+  value = aws_iam_role.irsa_prometheus.arn
+ }
 }

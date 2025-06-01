@@ -1,0 +1,35 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Local environment
+.terraform.lock.hcl
+.terragrunt-cache/
+
+# Editor and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.bak
+*.log
+
+# AWS credentials (if any)
+*.pem
+*.key
+*.crt
+
+# Helm cache
+.helm/
+
+# Plan output
+plan.out
