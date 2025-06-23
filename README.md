@@ -1,4 +1,4 @@
-# JUCR EKS Terraform Solution
+EKS Terraform Solution
 
 ## ✅ Overview
 
